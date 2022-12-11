@@ -17,3 +17,13 @@ if __name__ == '__main__':
                     ls.append([i,j,k])
                     
     print(ls)
+
+
+## Find the Runner-Up Score!
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    arr_ls = list(set(arr))
+    arr_ls.remove(max(arr_ls))
+    arr_ls.sort( reverse=True)
+    print(arr_ls[0])
