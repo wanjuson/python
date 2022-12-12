@@ -27,3 +27,27 @@ if __name__ == '__main__':
     arr_ls.remove(max(arr_ls))
     arr_ls.sort( reverse=True)
     print(arr_ls[0])
+
+## Finding the percentage
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    sums = 0
+    
+    # print(n)
+    # print(name)
+    # print(scores)
+    # print(student_marks)
+    # print(student_marks[query_name])
+    
+    for i in range(len(student_marks[query_name])):
+        sums = sums + student_marks[query_name][i]
+    re = sums/len(student_marks[query_name])
+    print("{:.2f}".format(re))
+    
+    # print(round(sums/n),3)
