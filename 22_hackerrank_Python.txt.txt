@@ -51,3 +51,29 @@ if __name__ == '__main__':
     print("{:.2f}".format(re))
     
     # print(round(sums/n),3)
+
+## Nested Lists
+if __name__ == '__main__':
+    namels, scorels = [], []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        namels.append(name)
+        scorels.append(score)
+
+    scorels2 = list(set(scorels))
+    scorels2.remove(min(scorels2))
+    scorels2.sort()
+    # print(scorels2[0]) # 2nd max
+    
+    namels2 = []  
+    for i in range(len(scorels)):
+        if scorels[i] == scorels2[0]:
+            namels2.append(namels[i])
+        else:
+            pass
+    namels2.sort()
+    
+    for i in range(len(namels2)):
+        print(namels2[i])
+
