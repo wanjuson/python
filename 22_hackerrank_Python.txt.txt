@@ -77,3 +77,10 @@ if __name__ == '__main__':
     for i in range(len(namels2)):
         print(namels2[i])
 
+## Tuples
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    t=tuple(integer_list)
+    print(hash(t))
+
