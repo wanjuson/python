@@ -102,3 +102,30 @@ if __name__ == '__main__':
     else:
         print('True')
 
+## TypesLists
+if __name__ == '__main__':
+    N = int(input())
+    test_ls = []
+    re_ls = []
+    
+    for i in range(N):
+        test_ls = list(input().split())
+        tmp_order = test_ls[0] 
+        # print(tmp_order)
+        if tmp_order == 'insert':
+            re_ls.insert(int(test_ls[1]), int(test_ls[2]))
+        elif tmp_order == 'print':
+            print(re_ls)
+        elif tmp_order == 'remove':
+            re_ls.remove(int(test_ls[1] ))
+        elif tmp_order == 'append':
+            re_ls.append(int(test_ls[1]))
+        elif tmp_order == 'sort':
+            re_ls.sort()
+        elif tmp_order == 'pop':
+            re_ls.pop()
+        elif tmp_order == 'reverse':
+            re_ls.reverse()
+        else:
+            pass
+  
